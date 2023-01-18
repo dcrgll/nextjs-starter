@@ -1,0 +1,11 @@
+name: Lint
+on: push
+jobs:
+  Format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install modules
+        run: yarn
+      - name: Run Prettier
+        run: 'yarn lint'
